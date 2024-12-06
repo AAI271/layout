@@ -5,7 +5,7 @@ import { RootState } from '../../store/redux';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import { Navigate } from 'react-router-dom';
-import './LoginForm.module.css'
+import styles from './LoginForm.module.css';
 
 interface LoginFormInputs {
   username: string;
@@ -33,19 +33,29 @@ const LoginForm: React.FC = () => {
   }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
-      <div>
-        <label>Username:</label>
-        <input {...register('username')} />
-        <p>{errors.username?.message}</p>
+    <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
+      <div className={styles.formGroup}>
+        <label className={styles.label}>Username:</label>
+        <input className={styles.input} {...register('username')} />
+        {errors.username && <p className={styles.error}>{errors.username.message}</p>}
       </div>
-      <div>
-        <label>Password:</label>
-        <input type="password" {...register('password')} />
-        <p>{errors.password?.message}</p>
+      <div className={styles.formGroup}>
+        <label className={styles.label}>Password:</label>
+        <input
+          type="password"
+          className={styles.input}
+          {...register('password')}
+        />
+        {errors.password && <p className={styles.error}>{errors.password.message}</p>}
       </div>
-      <button type="submit" disabled={loading}>Login</button>
-      {error && <p>{error}</p>}
+      <button
+        type="submit"
+        className={styles.button}
+        disabled={loading}
+      >
+        Login
+      </button>
+      {error && <p className={styles.error}>{error}</p>}
     </form>
   );
 };
