@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    transition: var(--tran-03);
+
+}
+
+:root{
+    --body-color: #E4E9F7;
+    --sidebar-color: #FFF;
+    --banner-color:linear-gradient(135deg, #6e8efb, #a777e3);
+    --table-header-color:#f5f5f5;
+    --primary-color: #695CFE;
+    --primary-color-light: #F6F5FF;
+    --toggle-color: #DDD;
+    --text-color: #373737;
+    --text-hover-color: #ffffff;
+    --tran-03: all 0.2s ease;
+    --tran-04: all 0.3s ease;
+    --tran-05: all 0.4s ease;
+}
+
+body.dark{
+    --body-color: #18191a;
+    --sidebar-color: #242526;
+    --banner-color: linear-gradient(135deg, #001c7a, #7100ff);
+    --table-header-color:#505050;
+    --primary-color: #3a3b3c;
+    --primary-color-light: #3a3b3c;
+    --toggle-color: #fff;
+    --text-color: #ccc;
+}
+body{
+    background-color: var(--body-color);
+}
+
+h2{
+    color: var(--text-color);
+}

@@ -1,0 +1,93 @@
+.tableWrapper {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  background-color:var(--primary-color-light); /* Белый фон */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: auto;
+  margin: 20px 0;
+  max-height: 80vh;
+  transition: box-shadow 0.3s ease;
+}
+
+
+.tableWrapper::-webkit-scrollbar:horizontal {
+  display: none;
+}
+
+.tableWrapper:hover {
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: auto;
+}
+
+.tableHeader {
+  background-color: var(--table-header-color);
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--text-color);
+  text-transform: uppercase;
+  padding: 16px 12px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.tableCell {
+  padding: 14px 12px;
+  color: var(--text-color);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  text-align: left;
+  font-size: 15px;
+}
+
+.tableRow {
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+}
+
+.tableRow:hover {
+  background-color: #f9f9f9;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
+}
+
+.tableRow:active {
+  background-color: rgba(240, 240, 240, 1);
+}
+
+.tableWrapper::-webkit-scrollbar {
+  width: 1vw;
+}
+
+.tableWrapper::-webkit-scrollbar-thumb {
+  background: #ddd;
+  border-radius: 5px;
+}
+
+.tableWrapper::-webkit-scrollbar-thumb:hover {
+  background: #bbb;
+}
+
+
+@media (max-width: 768px) {
+  .tableWrapper{
+    max-height: 65vh;
+  }
+  .tableHeader, .tableCell {
+    padding: 10px 8px;
+    font-size: 13px;
+  }
+  .tableWrapper {
+    margin: 15px 0;
+  }
+}
+@media (max-width: 480px) {
+  .tableHeader, .tableCell {
+    padding: 8px 6px;
+    font-size: 12px;
+  }
+  .tableWrapper {
+    border-radius: 8px;
+  }
+}

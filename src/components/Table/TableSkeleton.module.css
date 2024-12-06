@@ -1,0 +1,53 @@
+.skeletonContainer {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 16px;
+    background-color: var(--primary-color-light);
+  }
+  
+  .skeleton {
+    background-color: #e0e0e0; /* Gray for the skeleton */
+    border-radius: 4px;
+    animation: pulse 1.5s infinite;
+  }
+  
+  .header {
+    height: 24px;
+    width: 30%;
+    margin-bottom: 16px;
+  }
+  
+  .subHeader {
+    height: 24px;
+    width: 20%;
+    margin-bottom: 16px;
+  }
+  
+  .skeletonRows {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .row {
+    height: 32px;
+    width: 100%;
+  }
+  
+  /* Pulse animation */
+  @keyframes pulse {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.4;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
