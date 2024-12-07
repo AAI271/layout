@@ -4,26 +4,35 @@ const HomePage: React.FC = () => {
   return (
     <div className={styles.container}>
       <header className={styles.header}>
-        <h1 className={styles.title}>Welcome to Our Platform</h1>
+        <h1 className={styles.title}>Lorem Ipsum Platform</h1>
         <p className={styles.subtitle}>
-          Discover amazing content and explore new opportunities.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         </p>
-        <button className={styles.ctaButton}>Get Started</button>
+        <button className={styles.ctaButton}>Lorem Ipsum</button>
       </header>
 
       <section className={styles.featureSection}>
         <div className={styles.feature}>
-          <h2>Feature 1</h2>
-          <p>Learn about our first amazing feature.</p>
-        </div>
+          <h2 className={styles.featureTitle}>Feature 1</h2>
+          <p className={styles.featureDescription}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </p>
+          <i className={"bi bi-house-door "+ styles['icon']}></i>
+          </div>
         <div className={styles.feature}>
-          <h2>Feature 2</h2>
-          <p>Explore the benefits of using our platform.</p>
-        </div>
+          <h2 className={styles.featureTitle}>Feature 2</h2>
+          <p className={styles.featureDescription}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </p>
+          <i className={"bi bi-house-door "+ styles['icon']}></i>
+          </div>
         <div className={styles.feature}>
-          <h2>Feature 3</h2>
-          <p>Start your journey with our advanced tools.</p>
-        </div>
+          <h2 className={styles.featureTitle}>Feature 3</h2>
+          <p className={styles.featureDescription}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </p>
+          <i className={"bi bi-house-door "+ styles['icon']}></i>
+          </div>
       </section>
     </div>
   );

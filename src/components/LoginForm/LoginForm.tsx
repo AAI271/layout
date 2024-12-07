@@ -22,6 +22,10 @@ const LoginForm: React.FC = () => {
   const { loading, error, isAuthenticated } = useAppSelector((state: RootState) => state.auth);
   const { register, handleSubmit, formState: { errors } } = useForm<LoginFormInputs>({
     resolver: yupResolver(schema),
+    defaultValues: {
+      username: 'mor_2314', // Pre-fill the username field
+      password: '83r5^_',   // Pre-fill the password field
+    },
   });
 
   const onSubmit = (data: LoginFormInputs) => {
